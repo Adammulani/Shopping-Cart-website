@@ -1,12 +1,14 @@
 import {FcDeleteDatabase} from "react-icons/fc"
 import { useDispatch } from "react-redux";
 import { remove } from "../redux/Slices/MyCartSlice";
+import toast from "react-hot-toast";
 
 const CartItem = ({item,index}) => {
 
   const dispatch=useDispatch();
   const removeItem=()=>{
        dispatch(remove(item.id))
+       toast.success("Item removed from cart")
   }
   return (
     <div>
