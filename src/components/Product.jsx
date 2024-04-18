@@ -9,7 +9,7 @@ const Product = ({post}) => {
 
   const removeItem=()=>{
     dispatch(remove(post.id));
-    toast.success("Item removed from cart")
+    toast.error("Item removed from cart")
   }
 
   const addItem=()=>{
